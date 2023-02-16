@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 function Navbar(props) {
   return (
-    <>
+    <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
@@ -48,7 +48,7 @@ function Navbar(props) {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 
@@ -60,7 +60,7 @@ Navbar.prototypes = {
 
 Navbar.defaultProps = {
     title: 'Set Title here',
-    about: 'About Text here'
+    about: 'About'
 }
 
 
