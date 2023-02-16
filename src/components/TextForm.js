@@ -3,14 +3,29 @@ import PropTypes from "prop-types";
 
 function TextForm(props) {
 
-    const handleUpClick = () => {
+    const handleUppercaseClick = () => {
         let newText = text.toUpperCase();
         setConvertedText(newText);
     }
 
-    const handleLowClick = () => {
+    const handleLowercaseClick = () => {
         let newText = text.toLowerCase();
         setConvertedText(newText);
+    }
+
+    const handleRemoveSpaceClick = () => {
+        let newText = text.split(" ").join("");
+        setConvertedText(newText);
+    }
+
+    const handleRemoveComaClick = () => {
+        let newText = text.split(",").join(" ");
+        setConvertedText(newText);
+    }
+
+    const handleClearTextClick = () => {
+        setConvertedText(text);
+        setText("");
     }
 
     const handleOnChange = (event) => {
@@ -26,8 +41,13 @@ function TextForm(props) {
                 <div className="my-3">
                     <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnChange}></textarea>
                 </div>
-                <button className="btn btn-outline-success mx-1" onClick={handleUpClick}>Uppercase</button>
-                <button className="btn btn-outline-success mx-1" onClick={handleLowClick}>Lowercase</button>
+                <div className="container text-center">
+                    <button className="btn btn-outline-success mx-1" onClick={handleUppercaseClick}>Uppercase</button>
+                    <button className="btn btn-outline-success mx-1" onClick={handleLowercaseClick}>Lowercase</button>
+                    <button className="btn btn-outline-success mx-1" onClick={handleRemoveSpaceClick}>Remove " "</button>
+                    <button className="btn btn-outline-success mx-1" onClick={handleRemoveComaClick}>Remove ' , '</button>
+                    <button className="btn btn-outline-success mx-1" onClick={handleClearTextClick}>Clear Text</button>
+                </div>
                 <div className="my-3">
                     <textarea className="form-control" id="myBox" rows="8" value={convertedText}></textarea>
                 </div>
