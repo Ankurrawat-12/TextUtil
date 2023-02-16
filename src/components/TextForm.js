@@ -15,6 +15,7 @@ function TextForm(props) {
 
     const handleRemoveSpaceClick = () => {
         let newText = text.split(" ").join("");
+        // let newText = text.split(/[ ]+/).join(" ");
         setConvertedText(newText);
     }
 
@@ -26,6 +27,10 @@ function TextForm(props) {
     const handleClearTextClick = () => {
         setConvertedText(text);
         setText("");
+    }
+
+    const handleCopyTextClick = () => {
+        navigator.clipboard.writeText(convertedText);
     }
 
     const handleOnChange = (event) => {
@@ -42,11 +47,12 @@ function TextForm(props) {
                     <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnChange}></textarea>
                 </div>
                 <div className="container text-center">
-                    <button className="btn btn-outline-success mx-1" onClick={handleUppercaseClick}>Uppercase</button>
-                    <button className="btn btn-outline-success mx-1" onClick={handleLowercaseClick}>Lowercase</button>
-                    <button className="btn btn-outline-success mx-1" onClick={handleRemoveSpaceClick}>Remove " "</button>
-                    <button className="btn btn-outline-success mx-1" onClick={handleRemoveComaClick}>Remove ' , '</button>
-                    <button className="btn btn-outline-success mx-1" onClick={handleClearTextClick}>Clear Text</button>
+                    <button className="btn btn-outline-dark m-2" onClick={handleUppercaseClick}>Uppercase</button>
+                    <button className="btn btn-outline-dark m-2" onClick={handleLowercaseClick}>Lowercase</button>
+                    <button className="btn btn-outline-dark m-2" onClick={handleRemoveSpaceClick}>Remove " "</button>
+                    <button className="btn btn-outline-dark m-2" onClick={handleRemoveComaClick}>Remove ' , '</button>
+                    <button className="btn btn-outline-dark m-2" onClick={handleClearTextClick}>Clear Text</button>
+                    <button className="btn btn-outline-dark m-2" onClick={handleCopyTextClick}>Copy 'Text'</button>
                 </div>
                 <div className="my-3">
                     <textarea className="form-control" id="myBox" rows="8" value={convertedText}></textarea>

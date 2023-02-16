@@ -7,7 +7,9 @@ function Navbar(props) {
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          
+          <a class="navbar-brand" href="/">
+            <img src={props.logo} alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
             {props.title}
           </a>
           {/* <button
@@ -21,8 +23,8 @@ function Navbar(props) {
           >
             <span className="navbar-toggler-icon"></span>
           </button> */}
-          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
-            {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
                   Home
@@ -34,6 +36,7 @@ function Navbar(props) {
                 </a>
               </li>
             </ul> */}
+
             {/* <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
