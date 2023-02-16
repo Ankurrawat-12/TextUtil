@@ -1,12 +1,14 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-function Navbar() {
+
+function Navbar(props) {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            TextUtils
+            {props.title}
           </a>
           <button
             className="navbar-toggler"
@@ -28,7 +30,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  About
+                  {props.about}
                 </a>
               </li>
             </ul>
@@ -49,5 +51,17 @@ function Navbar() {
     </>
   );
 }
+
+
+Navbar.prototypes = {
+    title: PropTypes.string.isRequired,
+    about: PropTypes.string.isRequired
+}
+
+Navbar.defaultProps = {
+    title: 'Set Title here',
+    about: 'About Text here'
+}
+
 
 export default Navbar;
