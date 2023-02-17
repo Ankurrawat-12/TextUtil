@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 function TextForm(props) {
+    document.title = "Home | TextUtils";
 
     const handleUppercaseClick = () => {
         let newText = text.toUpperCase();

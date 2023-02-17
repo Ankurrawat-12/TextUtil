@@ -1,4 +1,5 @@
 function About(props) {
+    document.title = "About | TextUtils";
   return (
     <div
       className="container"
