@@ -23,7 +23,7 @@ function About(props) {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Accordion Item #1
+              About TextUtil
             </button>
           </h2>
           <div
@@ -39,14 +39,13 @@ function About(props) {
                 color: props.mode === "dark" ? "#fdfdfa" : "#252529",
               }}
             >
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <strong>
+                TextUtil is an online text manipulation tool that helps you
+                customize and optimize your written content.
+              </strong>{" "}
+              Whether you need to change the formatting, remove unwanted
+              characters, or extract specific data, TextUtil makes it easy and
+              quick to achieve your desired results.
             </div>
           </div>
         </div>
@@ -64,7 +63,7 @@ function About(props) {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              Text Manipulation Made Easy
             </button>
           </h2>
           <div
@@ -80,14 +79,12 @@ function About(props) {
                 color: props.mode === "dark" ? "#fdfdfa" : "#252529",
               }}
             >
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              With TextUtil, you don't need to be a programmer or have any
+              special skills to improve your text. The platform offers a
+              user-friendly interface that lets you select from a wide range of
+              features, such as sorting, filtering, and merging, and apply them
+              to your text instantly. You can also save your favorite options
+              for future use or share them with others.
             </div>
           </div>
         </div>
@@ -105,7 +102,7 @@ function About(props) {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              Customized Text for Your Needs
             </button>
           </h2>
           <div
@@ -121,14 +118,11 @@ function About(props) {
                 color: props.mode === "dark" ? "#fdfdfa" : "#252529",
               }}
             >
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Whether you're a student, a writer, or a business professional,
+              TextUtil can help you streamline your work and save time. By
+              automating repetitive tasks and enabling you to focus on the
+              content, rather than the formatting, TextUtil empowers you to be
+              more productive and efficient in your work.
             </div>
           </div>
         </div>
