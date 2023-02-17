@@ -5,14 +5,14 @@ import PropTypes from 'prop-types'
 function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className={`navbar navbar-expand-lg navbar-${props.mode}  bg-${props.mode}`}>
         <div className="container-fluid">
           
-          <a class="navbar-brand" href="/">
-            <img src={props.logo} alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+          <a className="navbar-brand" href="/">
+            <img src={props.logo} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
             {props.title}
           </a>
-          {/* <button
+          <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -22,8 +22,8 @@ function Navbar(props) {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button> */}
-          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
@@ -35,7 +35,7 @@ function Navbar(props) {
                   {props.about}
                 </a>
               </li>
-            </ul> */}
+            </ul>
 
             {/* <form className="d-flex" role="search">
               <input
@@ -48,7 +48,11 @@ function Navbar(props) {
                 Search
               </button>
             </form> */}
-          {/* </div> */}
+            <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}>
+              <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'dark'?'Dark':'Light'} Mode</label>
+            </div>
+          </div>
         </div>
       </nav>
     </div>

@@ -41,29 +41,35 @@ function TextForm(props) {
     const [convertedText, setConvertedText] = useState("");
     return (
         <>
-            <div className="container">
+            <div className="container" style={{ color: props.mode === 'dark' ? '#fdfdfa' : '#252529' }}>
                 <h1 className="text-center">{props.heading}</h1>
                 <div className="my-3">
-                    <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnChange}></textarea>
+                    <textarea className="form-control" id="myBox" rows="8" value={text} onChange={handleOnChange} style={{
+                        backgroundColor: props.mode === 'dark' ? '#252529' : '#fdfdfa',
+                        color: props.mode === 'dark' ? '#fdfdfa' : '#252529'
+                    }}></textarea>
                 </div>
                 <div className="container text-center">
-                    <button className="btn btn-outline-dark m-2" onClick={handleUppercaseClick}>Uppercase</button>
-                    <button className="btn btn-outline-dark m-2" onClick={handleLowercaseClick}>Lowercase</button>
-                    <button className="btn btn-outline-dark m-2" onClick={handleRemoveSpaceClick}>Remove " "</button>
-                    <button className="btn btn-outline-dark m-2" onClick={handleRemoveComaClick}>Remove ' , '</button>
-                    <button className="btn btn-outline-dark m-2" onClick={handleClearTextClick}>Clear Text</button>
-                    <button className="btn btn-outline-dark m-2" onClick={handleCopyTextClick}>Copy 'Text'</button>
+                    <button className={`btn btn${props.mode === 'light' ? '-outline-dark' : '-outline-light'} m-2`} onClick={handleUppercaseClick}>Uppercase</button>
+                    <button className={`btn btn${props.mode === 'light' ? '-outline-dark' : '-outline-light'} m-2`} onClick={handleLowercaseClick}>Lowercase</button>
+                    <button className={`btn btn${props.mode === 'light' ? '-outline-dark' : '-outline-light'} m-2`} onClick={handleRemoveSpaceClick}>Remove " "</button>
+                    <button className={`btn btn${props.mode === 'light' ? '-outline-dark' : '-outline-light'} m-2`} onClick={handleRemoveComaClick}>Remove ' , '</button>
+                    <button className={`btn btn${props.mode === 'light' ? '-outline-dark' : '-outline-light'} m-2`} onClick={handleClearTextClick}>Clear Text</button>
+                    <button className={`btn btn${props.mode === 'light' ? '-outline-dark' : '-outline-light'} m-2`} onClick={handleCopyTextClick}>Copy 'Text'</button>
                 </div>
                 <div className="my-3">
-                    <textarea className="form-control" id="myBox" rows="8" value={convertedText}></textarea>
+                    <textarea className="form-control" id="myBox" rows="8" value={convertedText} style={{
+                        backgroundColor: props.mode === 'dark' ? '#252529' : '#fdfdfa',
+                        color: props.mode === 'dark' ? '#fdfdfa' : '#252529'
+                    }}></textarea>
                 </div>
             </div>
-            <div className="container">
+            <div className="container" style={{ color: props.mode === 'dark' ? '#fdfdfa' : '#252529' }}>
                 <h1 className="text-center">Your Text Summary</h1>
                 <p className="my-3 text-center"> {text.split(" ").length} words {text.length} characters</p>
                 <p className="my-3 text-center"> {0.008 * text.split(" ").length} Minutes</p>
                 <h2 className="text-center">Preview</h2>
-                <p className="text-center">{text}</p>
+                <p className="text-center">{text.length>0?text:"Enter  Something to preview"}</p>
 
             </div>
         </>
