@@ -35,7 +35,7 @@ function TextForm(props) {
     }
 
     const handleCopyTextClick = () => {
-        props.showAlert("Copyed Converted Text ", "warning");
+        props.showAlert("Copied Converted Text ", "warning");
         navigator.clipboard.writeText(convertedText);
     }
 
