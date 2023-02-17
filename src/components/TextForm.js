@@ -45,6 +45,11 @@ function TextForm(props) {
 
     const [text, setText] = useState("");
     const [convertedText, setConvertedText] = useState("");
+
+
+    const wordsArray = text.split(" ").filter((str) => str !== '');
+    const words = wordsArray.length;
+
     return (
         <>
             <div className="container" style={{ color: props.mode === 'dark' ? '#fdfdfa' : '#252529' }}>
@@ -72,8 +77,8 @@ function TextForm(props) {
             </div>
             <div className="container" style={{ color: props.mode === 'dark' ? '#fdfdfa' : '#252529' }}>
                 <h1 className="text-center">Your Text Summary</h1>
-                <p className="my-3 text-center"> {text.split(" ").length} words {text.length} characters</p>
-                <p className="my-3 text-center"> {0.008 * text.split(" ").length} Minutes</p>
+                <p className="my-3 text-center"> {words} words {text.length} characters</p>
+                <p className="my-3 text-center"> {0.008 * words} Minutes</p>
                 <h2 className="text-center">Preview</h2>
                 <p className="text-center">{text.length>0?text:"Enter  Something to preview"}</p>
 
