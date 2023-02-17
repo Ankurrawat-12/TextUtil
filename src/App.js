@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 // import About from "./components/About";
 import Navbar from "./components/Navbar";
@@ -37,7 +36,7 @@ function App() {
   return (
     <>
     {/* <Navbar title="TextUtils" about="About TextUtils" /> */}
-    <Navbar title="TextUtils" logo={logo} mode={mode} toggleMode={toggleMode}/>
+    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
       <TextForm heading="Enter The Text To Analyze" mode={mode} showAlert={showAlert}/>

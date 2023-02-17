@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
-
 function Navbar(props) {
   return (
     <div>
@@ -9,7 +8,6 @@ function Navbar(props) {
         <div className="container-fluid">
           
           <a className="navbar-brand" href="/">
-            <img src={props.logo} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
             {props.title}
           </a>
           <button
