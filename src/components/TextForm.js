@@ -6,30 +6,36 @@ function TextForm(props) {
     const handleUppercaseClick = () => {
         let newText = text.toUpperCase();
         setConvertedText(newText);
+        props.showAlert("Converted to Uppercase!", "success");
     }
 
     const handleLowercaseClick = () => {
         let newText = text.toLowerCase();
         setConvertedText(newText);
+        props.showAlert("Converted to Lowercase!", "success");
     }
 
     const handleRemoveSpaceClick = () => {
-        let newText = text.split(" ").join("");
+        let newText = text.split(" ").join(" ");
         // let newText = text.split(/[ ]+/).join(" ");
         setConvertedText(newText);
+        props.showAlert("Removed all Extra Spaces", "primary");
     }
 
     const handleRemoveComaClick = () => {
         let newText = text.split(",").join(" ");
         setConvertedText(newText);
+        props.showAlert("Removed all Comma ", "primary");
     }
 
     const handleClearTextClick = () => {
         setConvertedText(text);
         setText("");
+        props.showAlert("Cleared all Text ", "danger");
     }
 
     const handleCopyTextClick = () => {
+        props.showAlert("Copyed Converted Text ", "warning");
         navigator.clipboard.writeText(convertedText);
     }
 
