@@ -48,7 +48,7 @@ function TextForm(props) {
     const [convertedText, setConvertedText] = useState("");
 
 
-    const wordsArray = text.split(" ").filter((str) => str !== '');
+    const wordsArray = text.split(/\s+/).filter((str) => str !== '');
     const words = wordsArray.length;
 
     return (
